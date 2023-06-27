@@ -35,13 +35,14 @@ Run the script using the following command:
 
 The script will present a menu with the following options:
 
-#### Install cluster: Installs the cluster and checks if Terraform is installed.
+#### Get AWS Credentials
 
-#### Start cluster: Starts the cluster.
+#### Start cluster: Install and starts the cluster.
 
 #### Stop cluster: Stops the cluster.
 
 #### Check cluster status: Checks the cluster status by making requests to the load balancer's health endpoint.
+After cluster creation an output with ALB will be showed, just paste in the when required
 
 #### Quit: Exits the script.
 
