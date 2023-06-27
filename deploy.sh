@@ -21,6 +21,9 @@ get_credentials(){
     read -p "Enter your AWS_ACCESS_KEY: " AWS_ACCESS_KEY
     read -p "Enter your AWS_SECRET_ACCESS_KEY: " AWS_SECRET_KEY
     read -p "Enter your AWS_REGION: " AWS_REGION
+    export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY
+    export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_KEY
+    export AWS_DEFAULT_REGION=$AWS_REGION
 } 
 
 
@@ -28,6 +31,7 @@ install_cluster() {
   echo "Installing cluster..."
   echo "Getting Credentials..."
   #get_credentials
+  terraform validate
   terraform init
   terraform plan
   terraform apply
